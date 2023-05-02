@@ -22,6 +22,13 @@ header h1 {
   background-repeat: no-repeat;
   background-position: center;
 }
+.fullstop {
+  position: absolute;
+  bottom: 0.5rem;
+  width: 0.7rem;
+  height: 0.7rem;
+}
+
 .profile {
   display: flex;
   margin-bottom: 1.5rem;
@@ -75,12 +82,6 @@ header h1 {
   height: 2rem;
 }
 
-.profile .contact .fullstop {
-  position: absolute;
-  bottom: 0.5rem;
-  width: 0.7rem;
-  height: 0.7rem;
-}
 .profile .links {
   display: flex;
   justify-content: space-around;
@@ -120,4 +121,14 @@ header h1 {
   background-size: 12rem;
   width: 12rem;
   height: 10rem;
+}
+
+/*Experience*/
+.experience {
+  margin-bottom: 3rem;
+}
+
+.experience h1 {
+  font-size: 3rem;
+  font-weight: 700;
 }
