@@ -1,0 +1,17 @@
+.profile {
+  flex-direction: column;
+  align-items: center;
+}
+.profile .photo .bgimg {
+  left: 8rem;
+}
+.profile .photo .nudake {
+  transform: rotate(0deg);
+}
+.profile .myinfo {
+  margin: 2rem 0 0;
+}
+.profile .links {
+  height: 20rem;
+  width: auto;
+}

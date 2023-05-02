@@ -4,7 +4,7 @@ body {
   font-family: "Roboto", "Noto Sans KR", sans-serif;
   background-color: var(--color-bg);
   color: var(--color-text);
-  padding: 2rem;
+  padding: 5rem;
 }
 /*Header*/
 header {
@@ -49,44 +49,48 @@ header h1 {
   background-position: center;
 }
 .profile .photo .nudake {
-  width: 20rem;
-  height: 20rem;
+  width: 25rem;
+  height: 25rem;
   margin: 7rem 1.5rem 0;
   transform: rotate(-10deg);
 
   background-image: url("../images/my2.png");
   background-repeat: no-repeat;
-  background-size: 20rem;
   background-position: center;
 }
 
 .profile .myinfo {
   flex: 1;
+  display: flex;
+  flex-direction: column;
   margin-right: 2rem;
-  padding-top: 4.5rem;
+  margin: 2rem;
+  padding: 2rem 2rem 1rem;
+  border: 0.3rem dotted var(--color-text);
+  border-radius: 2rem;
 }
-.profile .contact {
-  line-height: 2rem;
-  position: relative;
-}
-.profile .contact strong {
-  font-weight: 700;
-  font-size: 1.5rem;
+.profile .introduce {
+  flex: 1;
+  line-height: 1.2rem;
 }
 
-.profile .contact .exclamation {
-  position: relative;
-  top: 0.5rem;
-  left: -0.8rem;
-  width: 2rem;
-  height: 2rem;
+.profile .contact li {
+  display: flex;
+  font-weight: 700;
+  font-size: 1.2rem;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.profile .contact img {
+  width: 1.3rem;
+  height: 1.3rem;
 }
 
 .profile .links {
-  display: flex;
-  justify-content: space-around;
+  padding: 5rem;
+  flex: 1;
   position: relative;
-  margin-top: 2rem;
 }
 
 .profile .links img {
@@ -95,14 +99,14 @@ header h1 {
 }
 .profile .links a {
   position: absolute;
-  top: 6.7rem;
+  bottom: 0rem;
 }
 .profile .links .notion a {
   position: absolute;
   left: 5.5rem;
 }
 .profile .links .notion .bgimg {
-  top: 0;
+  top: 1.5rem;
   left: 0;
   background-image: url("../images/notion_guide.png");
   background-size: 20rem;
@@ -114,7 +118,7 @@ header h1 {
   right: 8.3rem;
 }
 .profile .links .github .bgimg {
-  top: 0.5rem;
+  top: 2.5rem;
   right: 0.1rem;
   background-image: url("../images/github_guide.png");
   background-position: right;
@@ -131,4 +135,10 @@ header h1 {
 .experience h1 {
   font-size: 3rem;
   font-weight: 700;
+}
+.project {
+  margin-bottom: 3rem;
+}
+.project .description ul > li {
+  margin-bottom: 1rem;
 }

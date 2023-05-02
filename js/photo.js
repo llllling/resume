@@ -1,6 +1,6 @@
 export class Photo {
-  w = 320;
-  h = 320;
+  w = 400;
+  h = 400;
   constructor() {
     this.prePosition = { x: 0, y: 0 };
     this.canvas = document.querySelector("canvas");
