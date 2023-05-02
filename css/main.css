@@ -1,0 +1,123 @@
+body {
+  --color-bg: #c7c2b8;
+  --color-text: #1b1b19;
+  font-family: "Roboto", "Noto Sans KR", sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  padding: 2rem;
+}
+/*Header*/
+header {
+  margin-bottom: 3rem;
+}
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+/*Main*/
+.bgimg {
+  position: absolute;
+  text-indent: -9999px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.profile {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+.profile .photo {
+  position: relative;
+  flex: 1;
+  margin-right: 2rem;
+}
+
+.profile .photo .bgimg {
+  top: -1rem;
+  left: 4rem;
+  background-image: url("../images/photo_guide.png");
+  background-size: 20rem;
+  width: 20rem;
+  height: 10rem;
+  background-position: center;
+}
+.profile .photo .nudake {
+  width: 20rem;
+  height: 20rem;
+  margin: 7rem 1.5rem 0;
+  transform: rotate(-10deg);
+
+  background-image: url("../images/my2.png");
+  background-repeat: no-repeat;
+  background-size: 20rem;
+  background-position: center;
+}
+
+.profile .myinfo {
+  flex: 1;
+  margin-right: 2rem;
+  padding-top: 4.5rem;
+}
+.profile .contact {
+  line-height: 2rem;
+  position: relative;
+}
+.profile .contact strong {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.profile .contact .exclamation {
+  position: relative;
+  top: 0.5rem;
+  left: -0.8rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+.profile .contact .fullstop {
+  position: absolute;
+  bottom: 0.5rem;
+  width: 0.7rem;
+  height: 0.7rem;
+}
+.profile .links {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  margin-top: 2rem;
+}
+
+.profile .links img {
+  width: 3rem;
+  height: 3rem;
+}
+.profile .links a {
+  position: absolute;
+  top: 6.7rem;
+}
+.profile .links .notion a {
+  position: absolute;
+  left: 5.5rem;
+}
+.profile .links .notion .bgimg {
+  top: 0;
+  left: 0;
+  background-image: url("../images/notion_guide.png");
+  background-size: 20rem;
+  width: 20rem;
+  height: 7rem;
+}
+.profile .links .github a {
+  position: absolute;
+  right: 8.3rem;
+}
+.profile .links .github .bgimg {
+  top: 0.5rem;
+  right: 0.1rem;
+  background-image: url("../images/github_guide.png");
+  background-position: right;
+  background-size: 12rem;
+  width: 12rem;
+  height: 10rem;
+}
