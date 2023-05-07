@@ -165,13 +165,11 @@ main {
   margin-bottom: 2rem;
 }
 .experience .project {
-  position: relative;
-}
-.experience .project .inner {
   margin-bottom: 3rem;
   position: relative;
   background-color: #fff;
 }
+
 .experience .project .title {
   padding: 0;
   margin-bottom: 0rem;
@@ -201,34 +199,25 @@ main {
 
 .experience .project .description ul {
   border-width: 0.15rem;
-  padding: 0.9rem;
+  padding-left: 0.9rem;
   font-weight: 500;
 }
 .experience .project .description ul > li {
   margin-bottom: 1rem;
   list-style-type: square;
 }
-.experience .project .skill li {
-  height: 2rem;
+.experience .project .skill ul {
+  padding: 0 1rem 1rem 1rem;
   display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
   align-items: center;
-  padding-right: 1rem;
+  font-size: 0.7rem;
 }
-
-.experience .project .skill li::before {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: -1rem;
-  width: 0;
-  height: 1rem;
-  border-top: 1rem solid blue;
-  border-right: 1rem solid transparent;
-}
-.experience .project .skill li:nth-child(1) {
-  position: absolute;
-  top: 0;
-  right: 1rem;
-  background-color: red;
+.experience .project .skill li {
+  padding: 0.2rem 0.5rem;
+  border: var(--border);
+  border-radius: 0.3rem;
+  color: var(--color-bg);
+  background-color: var(--color-text);
 }
