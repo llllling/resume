@@ -6,6 +6,10 @@ body {
   background-color: var(--color-bg);
   color: var(--color-text);
 }
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
 /*Header*/
 header {
   padding: 0 1rem;
@@ -20,7 +24,6 @@ header div {
 }
 header h1 {
   font-size: 2.5rem;
-  font-weight: bold;
 }
 main {
   padding: 0 5rem;
@@ -141,12 +144,8 @@ main {
 .experience {
   margin-bottom: 3rem;
 }
-
 .experience h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  text-decoration: underline;
+  margin: 2rem 0 1rem 0;
 }
 .experience .title {
   padding: 1rem;
@@ -220,4 +219,36 @@ main {
   border-radius: 0.3rem;
   color: var(--color-bg);
   background-color: var(--color-text);
+}
+
+/* Education */
+.education {
+  margin-bottom: 2rem;
+}
+.education h1 {
+  margin-bottom: 0.5rem;
+}
+.education div {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+.education div.description {
+  font-weight: 600;
+}
+
+/* Certificate */
+.certificate h1 {
+  margin-bottom: 0.5rem;
+}
+
+.certificate ul {
+  padding: 0 2rem;
+  margin-bottom: 3rem;
+  font-weight: 700;
+  list-style-type: square;
+  font-size: 1.2rem;
+}
+
+.certificate ul > li {
+  padding: 0.5rem;
 }

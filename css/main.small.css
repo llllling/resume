@@ -6,6 +6,8 @@
   left: 8rem;
 }
 .profile .photo .nudake {
+  width: 25rem;
+  height: 25rem;
   transform: rotate(0deg);
 }
 .profile .myinfo {
