@@ -36,43 +36,62 @@ main {
   background-repeat: no-repeat;
   background-position: center;
 }
-.fullstop {
-  position: absolute;
-  bottom: 0.5rem;
-  width: 0.7rem;
-  height: 0.7rem;
-}
 
+/*Main/Profile*/
 .profile {
   display: flex;
   margin-bottom: 1.5rem;
 }
 .profile .photo {
-  position: relative;
-  flex: 1;
+  display: flex;
+  flex-direction: column;
   margin-right: 2rem;
+  align-items: flex-end;
 }
-
 .profile .photo .bgimg {
-  top: -1rem;
-  left: 4rem;
+  position: relative;
   background-image: url("../images/photo_guide.png");
   background-size: 20rem;
   width: 20rem;
-  height: 10rem;
-  background-position: center;
+  height: 9rem;
 }
 .profile .photo .nudake {
+  position: relative;
   width: 25rem;
   height: 25rem;
-  margin: 7rem 1.5rem 0;
   transform: rotate(-10deg);
-
+}
+.profile .photo .nudake .canvas_bg {
+  position: absolute;
+  flex: 1;
   background-image: url("../images/my2.png");
   background-repeat: no-repeat;
   background-position: center;
 }
+.profile .photo .reset {
+  position: absolute;
+  right: -1rem;
+  bottom: -1.5rem;
+  padding-left: 1rem;
+  display: flex;
+  align-items: center;
 
+  font-weight: 700;
+  font-size: 0.9rem;
+  background-color: var(--color-text);
+  color: var(--color-bg);
+  cursor: pointer;
+}
+.profile .photo .reset::after {
+  content: " ";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: 1rem solid var(--color-bg);
+  border-top-color: var(--color-text);
+  border-bottom-color: var(--color-text);
+  border-left-color: var(--color-text);
+}
 .profile .myinfo {
   flex: 1;
   display: flex;
@@ -86,7 +105,6 @@ main {
   flex: 1;
   line-height: 1.2rem;
 }
-
 .profile .contact li {
   display: flex;
   font-weight: 700;
@@ -99,13 +117,11 @@ main {
   width: 1.3rem;
   height: 1.3rem;
 }
-
 .profile .links {
   padding: 5rem;
   flex: 1;
   position: relative;
 }
-
 .profile .links img {
   width: 3rem;
   height: 3rem;
@@ -140,7 +156,7 @@ main {
   height: 10rem;
 }
 
-/*Experience*/
+/*Main/Experience*/
 .experience {
   margin-bottom: 3rem;
 }
@@ -187,10 +203,10 @@ main {
 }
 .experience .project .description {
   margin: 1rem;
-  line-height: 1.1rem;
+  line-height: 1.5rem;
 }
 .experience .project .description div {
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
   padding-left: 0.7rem;
   border: var(--border);
   border-width: 0 0 0 0.2rem;
@@ -202,7 +218,7 @@ main {
   font-weight: 500;
 }
 .experience .project .description ul > li {
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
   list-style-type: square;
 }
 .experience .project .skill ul {
@@ -221,7 +237,7 @@ main {
   background-color: var(--color-text);
 }
 
-/* Education */
+/* Main/Education */
 .education {
   margin-bottom: 2rem;
 }
@@ -230,13 +246,13 @@ main {
 }
 .education div {
   font-size: 1.2rem;
-  line-height: 1.5rem;
 }
 .education div.description {
+  margin-top: 1.5rem;
   font-weight: 600;
 }
 
-/* Certificate */
+/* Main/Certificate */
 .certificate h1 {
   margin-bottom: 0.5rem;
 }
