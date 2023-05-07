@@ -1,17 +1,28 @@
+body {
+  overflow-x: hidden;
+}
+header {
+  width: 100%;
+}
+main {
+  padding: 0.5rem;
+}
+/*Main/Profile*/
 .profile {
   flex-direction: column;
   align-items: center;
 }
-.profile .photo .bgimg {
-  left: 8rem;
+.profile .myinfo {
+  margin-right: 0;
 }
-.profile .photo .nudake {
+.profile .myinfo .photo .nudake {
   width: 25rem;
   height: 25rem;
   transform: rotate(0deg);
 }
-.profile .myinfo {
-  margin: 2rem 0 0;
+
+.profile .introduce {
+  margin-top: 2rem;
 }
 .profile .links {
   height: 20rem;

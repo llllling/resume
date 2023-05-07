@@ -2,6 +2,8 @@ body {
   --color-bg: #f9e3ca;
   --color-text: #483628;
   --border: solid #483628;
+  --skill-color: #e47015;
+  --skill-etc-color: #908277;
   font-family: "Roboto", "Noto Sans KR", sans-serif;
   background-color: var(--color-bg);
   color: var(--color-text);
@@ -10,17 +12,15 @@ h1 {
   font-size: 3rem;
   font-weight: 700;
 }
+
 /*Header*/
 header {
   padding: 0 1rem;
+  width: 50%;
 }
 header div {
   padding: 2rem;
   margin-bottom: 0.3rem;
-  display: flex;
-  justify-content: center;
-  border: var(--border);
-  border-width: 0.2rem 0;
 }
 header h1 {
   font-size: 2.5rem;
@@ -40,35 +40,42 @@ main {
 /*Main/Profile*/
 .profile {
   display: flex;
-  margin-bottom: 1.5rem;
+  margin-bottom: 5rem;
 }
-.profile .photo {
+
+/* Main/Profile/myinfo */
+.profile .myinfo {
   display: flex;
   flex-direction: column;
-  margin-right: 2rem;
+  margin-right: 5rem;
+}
+.profile .myinfo .photo {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
   align-items: flex-end;
 }
-.profile .photo .bgimg {
+.profile .myinfo .photo .bgimg {
   position: relative;
   background-image: url("../images/photo_guide.png");
   background-size: 20rem;
   width: 20rem;
   height: 9rem;
 }
-.profile .photo .nudake {
+.profile .myinfo .photo .nudake {
   position: relative;
   width: 25rem;
   height: 25rem;
   transform: rotate(-10deg);
 }
-.profile .photo .nudake .canvas_bg {
+.profile .myinfo .photo .nudake .canvas_bg {
   position: absolute;
   flex: 1;
   background-image: url("../images/my2.png");
   background-repeat: no-repeat;
   background-position: center;
 }
-.profile .photo .reset {
+.profile .myinfo .photo .reset {
   position: absolute;
   right: -1rem;
   bottom: -1.5rem;
@@ -82,7 +89,7 @@ main {
   color: var(--color-bg);
   cursor: pointer;
 }
-.profile .photo .reset::after {
+.profile .myinfo .photo .reset::after {
   content: " ";
   display: inline-block;
   width: 0;
@@ -92,20 +99,12 @@ main {
   border-bottom-color: var(--color-text);
   border-left-color: var(--color-text);
 }
-.profile .myinfo {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  margin-right: 2rem;
-  margin: 2rem;
-  padding: 2rem 2rem 1rem;
-  border: var(--border);
+.profile .myinfo .contact ul {
+  padding: 1rem;
+  padding-left: 6rem;
+  box-sizing: border-box;
 }
-.profile .introduce {
-  flex: 1;
-  line-height: 1.2rem;
-}
-.profile .contact li {
+.profile .myinfo .contact li {
   display: flex;
   font-weight: 700;
   font-size: 1.2rem;
@@ -113,47 +112,57 @@ main {
   gap: 1rem;
   margin: 1rem 0;
 }
-.profile .contact img {
+.profile .myinfo .contact img {
   width: 1.3rem;
   height: 1.3rem;
 }
 .profile .links {
-  padding: 5rem;
-  flex: 1;
   position: relative;
+  display: flex;
 }
 .profile .links img {
   width: 3rem;
   height: 3rem;
 }
-.profile .links a {
-  position: absolute;
-  bottom: 0rem;
-}
-.profile .links .notion a {
-  position: absolute;
-  left: 5.5rem;
-}
 .profile .links .notion .bgimg {
-  top: 1.5rem;
-  left: 0;
   background-image: url("../images/notion_guide.png");
   background-size: 20rem;
   width: 20rem;
   height: 7rem;
 }
-.profile .links .github a {
-  position: absolute;
-  right: 8.3rem;
-}
 .profile .links .github .bgimg {
-  top: 2.5rem;
-  right: 0.1rem;
   background-image: url("../images/github_guide.png");
   background-position: right;
   background-size: 12rem;
   width: 12rem;
   height: 10rem;
+}
+
+/* Main/Profile/introduce */
+.profile .introduce {
+  line-height: 1.2rem;
+  border: var(--border);
+  padding: 2rem 2rem 1rem;
+  position: relative;
+}
+.profile .introduce h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  position: absolute;
+  top: -1.2rem;
+}
+.profile .introduce strong {
+  font-weight: 600;
+}
+.profile .introduce ul {
+  list-style-type: square;
+  padding: 2rem;
+  background-color: #fff;
+  border-top: var(--border);
+  border-top-width: 0.3rem;
+}
+.profile .introduce ul > li {
+  margin-bottom: 1rem;
 }
 
 /*Main/Experience*/
@@ -165,7 +174,6 @@ main {
 }
 .experience .title {
   padding: 1rem;
-  margin-bottom: 3rem;
 
   background-color: var(--color-text);
   color: var(--color-bg);
@@ -179,12 +187,35 @@ main {
   font-size: 1.2rem;
   margin-bottom: 2rem;
 }
+.experience .skill_guide ul {
+  margin: 0.5rem 0 3rem 0;
+  font-weight: 700;
+  display: flex;
+  align-items: flex-end;
+  color: #fff;
+}
+.experience .skill_guide ul > li {
+  margin-right: 0.3rem;
+  padding: 0.5rem 1rem;
+  border: var(--border);
+  border-radius: 0.3rem;
+  text-align: center;
+}
+.experience .skill_guide ul > li:first-child {
+  background-color: var(--skill-color);
+  border-color: var(--skill-color);
+}
+.experience .skill_guide ul > li:last-child {
+  background-color: var(--skill-etc-color);
+  border-color: var(--skill-etc-color);
+}
+
+/* Main/project */
 .experience .project {
   margin-bottom: 3rem;
   position: relative;
   background-color: #fff;
 }
-
 .experience .project .title {
   padding: 0;
   margin-bottom: 0rem;
@@ -211,10 +242,15 @@ main {
   border: var(--border);
   border-width: 0 0 0 0.2rem;
 }
-
+.experience .project .description h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
 .experience .project .description ul {
   border-width: 0.15rem;
   padding-left: 0.9rem;
+  margin-bottom: 3rem;
   font-weight: 500;
 }
 .experience .project .description ul > li {
@@ -227,14 +263,19 @@ main {
   flex-wrap: wrap;
   gap: 0.2rem;
   align-items: center;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
 }
 .experience .project .skill li {
   padding: 0.2rem 0.5rem;
   border: var(--border);
   border-radius: 0.3rem;
-  color: var(--color-bg);
-  background-color: var(--color-text);
+  border-color: var(--skill-color);
+  color: #fff;
+  background-color: var(--skill-color);
+}
+.experience .project .skill li.etc {
+  border-color: var(--skill-etc-color);
+  background-color: var(--skill-etc-color);
 }
 
 /* Main/Education */
@@ -242,10 +283,11 @@ main {
   margin-bottom: 2rem;
 }
 .education h1 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 .education div {
   font-size: 1.2rem;
+  line-height: 1.5rem;
 }
 .education div.description {
   margin-top: 1.5rem;
@@ -256,7 +298,6 @@ main {
 .certificate h1 {
   margin-bottom: 0.5rem;
 }
-
 .certificate ul {
   padding: 0 2rem;
   margin-bottom: 3rem;
@@ -264,7 +305,10 @@ main {
   list-style-type: square;
   font-size: 1.2rem;
 }
-
 .certificate ul > li {
   padding: 0.5rem;
+}
+.certificate ul > li span {
+  font-size: 1rem;
+  font-weight: 400;
 }

@@ -2,15 +2,24 @@ export class Photo {
   w = 400;
   h = 400;
   constructor() {
-    this.prePosition = { x: 0, y: 0 };
+    this.initCanvas();
+    this.initImage();
+  }
+
+  initPosition(e) {
+    this.prePosition = { x: e.offsetX, y: e.offsetY };
+  }
+
+  initCanvas() {
     this.canvas = document.querySelector("canvas");
     this.ctx = this.canvas.getContext("2d");
-
     this.canvas.width = this.w;
     this.canvas.height = this.h;
     this.canvas.style.width = this.w + "px";
     this.canvas.style.height = this.h + "px";
+  }
 
+  initImage() {
     this.img = new Image();
     this.img.src = "../images/my1.jpg";
     this.img.onload = () => {
@@ -34,6 +43,7 @@ export class Photo {
     const dy = Math.pow(this.prePosition.y - newPosition.y, 2);
     const distance = Math.sqrt(dx + dy);
     const angle = Math.atan2(dy, dx);
+
     Array.from({ length: distance }, (v, i) => i + 1).forEach((index) => {
       const x = this.prePosition.x + Math.cos(angle) * index;
       const y = this.prePosition.y + Math.sin(angle) * index;
@@ -44,5 +54,4 @@ export class Photo {
     });
     this.prePosition = newPosition;
   }
-  checkPercent() {}
 }
