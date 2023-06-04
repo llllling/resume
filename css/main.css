@@ -116,26 +116,8 @@ main {
   width: 1.3rem;
   height: 1.3rem;
 }
-.profile .links {
-  position: relative;
-  display: flex;
-}
-.profile .links img {
-  width: 3rem;
-  height: 3rem;
-}
-.profile .links .notion .bgimg {
-  background-image: url("../images/notion_guide.png");
-  background-size: 20rem;
-  width: 20rem;
-  height: 7rem;
-}
-.profile .links .github .bgimg {
-  background-image: url("../images/github_guide.png");
-  background-position: right;
-  background-size: 12rem;
-  width: 12rem;
-  height: 10rem;
+.profile .myinfo .contact a {
+  text-decoration: none;
 }
 
 /* Main/Profile/introduce */
@@ -146,10 +128,10 @@ main {
   position: relative;
 }
 .profile .introduce h2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 700;
   position: absolute;
-  top: -1.2rem;
+  top: -1.3rem;
 }
 .profile .introduce strong {
   font-weight: 600;
