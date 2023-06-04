@@ -114,7 +114,6 @@ main {
 }
 .profile .myinfo .contact img {
   width: 1.3rem;
-  height: 1.3rem;
 }
 .profile .myinfo .contact a {
   text-decoration: none;
@@ -122,6 +121,7 @@ main {
 
 /* Main/Profile/introduce */
 .profile .introduce {
+  margin-top: 1rem;
   line-height: 1.2rem;
   border: var(--border);
   padding: 2rem 2rem 1rem;
