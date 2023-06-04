@@ -1,10 +1,8 @@
 import { Photo } from "./photo.js";
-import { Copy } from "./copy.js";
 
 export class App {
   constructor() {
     this.photo = new Photo();
-    this.copy = new Copy();
 
     this.nudake = document.querySelector(".canvas_bg");
     this.resetBtn = document.querySelector(".reset");
