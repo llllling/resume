@@ -1,8 +1,9 @@
 body {
-  --color-bg: #d9dbca;
+  --color-bg: #fff;
+  --color-sub-bg: #f0f0f0;
   --color-text: #1e1e21;
   --border: solid #63635d;
-  --skill-color: #de7e71;
+  --skill-color: #49b383;
   --skill-etc-color: #949385;
   font-family: "Roboto", "Noto Sans KR", sans-serif;
   background-color: var(--color-bg);
@@ -16,20 +17,19 @@ h1 {
 /*Header*/
 header {
   padding: 0 1rem;
-  width: 50%;
 }
 header div {
   padding: 2rem;
-  margin-bottom: 0.3rem;
+  margin-bottom: 1rem;
 }
 header h1 {
-  font-size: 2.5rem;
-}
-main {
-  padding: 0 5rem;
+  font-size: 4rem;
 }
 
 /*Main*/
+main {
+  padding: 0 5rem;
+}
 .bgimg {
   position: absolute;
   text-indent: -9999px;
@@ -157,7 +157,7 @@ main {
 .profile .introduce ul {
   list-style-type: square;
   padding: 2rem;
-  background-color: #fff;
+  background-color: var(--color-sub-bg);
   border-top: var(--border);
   border-top-width: 0.3rem;
 }
@@ -214,7 +214,7 @@ main {
 .experience .project {
   margin-bottom: 3rem;
   position: relative;
-  background-color: #fff;
+  background-color: var(--color-sub-bg);
 }
 .experience .project .title {
   padding: 0;
