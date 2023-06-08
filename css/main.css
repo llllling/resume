@@ -40,7 +40,7 @@ main {
 /*Main/Profile*/
 .profile {
   display: flex;
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
 }
 
 /* Main/Profile/myinfo */
@@ -60,7 +60,7 @@ main {
   background-image: url("../images/photo_guide.png");
   background-size: 20rem;
   width: 20rem;
-  height: 9rem;
+  height: 8.5rem;
 }
 .profile .myinfo .photo .nudake {
   position: relative;
@@ -100,7 +100,6 @@ main {
   border-left-color: var(--color-text);
 }
 .profile .myinfo .contact ul {
-  padding: 1rem;
   padding-left: 6rem;
   box-sizing: border-box;
 }
@@ -110,7 +109,7 @@ main {
   font-size: 1.2rem;
   align-items: center;
   gap: 1rem;
-  margin: 1rem 0;
+  margin: 0.7rem 0;
 }
 .profile .myinfo .contact img {
   width: 1.3rem;
@@ -122,11 +121,14 @@ main {
 
 /* Main/Profile/introduce */
 .profile .introduce {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin-top: 1rem;
+  padding: 1rem 2rem;
+  position: relative;
   line-height: 1.2rem;
   border: var(--border);
-  padding: 2rem 2rem 1rem;
-  position: relative;
 }
 .profile .introduce h2 {
   font-size: 2rem;
