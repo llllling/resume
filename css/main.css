@@ -40,14 +40,16 @@ main {
 /*Main/Profile*/
 .profile {
   display: flex;
+  align-items: center;
   margin-bottom: 4rem;
+  gap: 7rem;
 }
 
 /* Main/Profile/myinfo */
 .profile .myinfo {
   display: flex;
   flex-direction: column;
-  margin-right: 5rem;
+  align-items: center;
 }
 .profile .myinfo .photo {
   margin-bottom: 2rem;
@@ -61,11 +63,10 @@ main {
   background-size: 20rem;
   width: 20rem;
   height: 8.5rem;
+  margin-bottom: none;
 }
 .profile .myinfo .photo .nudake {
   position: relative;
-  width: 25rem;
-  height: 25rem;
   transform: rotate(-10deg);
 }
 .profile .myinfo .photo .nudake .canvas_bg {
@@ -73,7 +74,6 @@ main {
 
   background-image: url("../images/my2.jpg");
   background-repeat: no-repeat;
-  background-size: 400px;
 }
 .profile .myinfo .photo .reset {
   position: absolute;
@@ -100,7 +100,6 @@ main {
   border-left-color: var(--color-text);
 }
 .profile .myinfo .contact ul {
-  padding-left: 6rem;
   box-sizing: border-box;
 }
 .profile .myinfo .contact li {
@@ -121,11 +120,12 @@ main {
 
 /* Main/Profile/introduce */
 .profile .introduce {
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-top: 1rem;
-  padding: 1rem 2rem;
+  padding: 2rem;
   position: relative;
   line-height: 1.2rem;
   border: var(--border);

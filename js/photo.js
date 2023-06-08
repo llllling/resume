@@ -1,6 +1,5 @@
 export class Photo {
-  w = 400;
-  h = 400;
+  size = 400;
   constructor() {
     this.initCanvas();
     this.initImage();
@@ -13,10 +12,19 @@ export class Photo {
   initCanvas() {
     this.canvas = document.querySelector("canvas");
     this.ctx = this.canvas.getContext("2d");
-    this.canvas.width = this.w;
-    this.canvas.height = this.h;
-    this.canvas.style.width = this.w + "px";
-    this.canvas.style.height = this.h + "px";
+    this.resizeCanvas();
+  }
+
+  resizeCanvas() {
+    this.canvas.width = this.size;
+    this.canvas.height = this.size;
+    this.canvas.style.width = this.size + "px";
+    this.canvas.style.height = this.size + "px";
+
+    document.querySelector(".canvas_bg").style.backgroundSize =
+      this.size + "px";
+    document.querySelector(".nudake").style.width = this.size + "px";
+    document.querySelector(".nudake").style.height = this.size + "px";
   }
 
   initImage() {

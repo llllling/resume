@@ -1,0 +1,18 @@
+/* Header */
+header h1 {
+  font-size: 3rem;
+}
+
+/* Main */
+main {
+  padding: 0 1.5rem;
+}
+.profile {
+  gap: 2rem;
+}
+.profile .myinfo .photo .bgimg {
+  margin-bottom: 1rem;
+}
+.profile .myinfo .photo .nudake {
+  transform: none;
+}
