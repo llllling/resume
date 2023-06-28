@@ -2,7 +2,7 @@ export class Photo {
   size = 400;
   constructor() {
     document.getElementsByClassName("canvas_bg")[0].style.backgroundImage =
-      'url("../images/my1.jpg")';
+      'url("../images/my2.jpg")';
 
     this.initCanvas();
     this.initImage();
@@ -39,7 +39,6 @@ export class Photo {
   drawCircles(e) {
     //원본 그림이 겹쳐지지 않음 부분만 ; 즉 처음에 그려진 도형에서 겹쳐지지 않는 부분만 표시 됨
     this.ctx.globalCompositeOperation = "destination-out";
-
     const newPosition = { x: e.offsetX, y: e.offsetY };
     const dx = Math.pow(this.prePosition.x - newPosition.x, 2);
     const dy = Math.pow(this.prePosition.y - newPosition.y, 2);
