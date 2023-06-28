@@ -1,3 +1,5 @@
-import { App } from "./app.js";
-const app = new App();
-app.init();
+import { isMobile, isTablet } from "./utils.js";
+import { Browser } from "./Browser.js";
+import { Mobile } from "./Mobile.js";
+
+isTablet || isMobile ? new Mobile() : new Browser();

@@ -10,7 +10,7 @@ export class Photo {
   }
 
   initCanvas() {
-    this.canvas = document.querySelector("canvas");
+    this.canvas = document.getElementsByTagName("canvas")[0];
     this.ctx = this.canvas.getContext("2d");
     this.resizeCanvas();
   }
@@ -21,10 +21,8 @@ export class Photo {
     this.canvas.style.width = this.size + "px";
     this.canvas.style.height = this.size + "px";
 
-    document.querySelector(".canvas_bg").style.backgroundSize =
-      this.size + "px";
-    document.querySelector(".nudake").style.width = this.size + "px";
-    document.querySelector(".nudake").style.height = this.size + "px";
+    document.getElementsByClassName("canvas_bg")[0].style.backgroundImage =
+      'url("../images/my2.jpg")';
   }
 
   initImage() {
