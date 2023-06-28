@@ -1,6 +1,9 @@
 export class Photo {
   size = 400;
   constructor() {
+    document.getElementsByClassName("canvas_bg")[0].style.backgroundImage =
+      'url("../images/my1.jpg")';
+
     this.initCanvas();
     this.initImage();
   }
@@ -12,17 +15,10 @@ export class Photo {
   initCanvas() {
     this.canvas = document.getElementsByTagName("canvas")[0];
     this.ctx = this.canvas.getContext("2d");
-    this.resizeCanvas();
-  }
-
-  resizeCanvas() {
     this.canvas.width = this.size;
     this.canvas.height = this.size;
     this.canvas.style.width = this.size + "px";
     this.canvas.style.height = this.size + "px";
-
-    document.getElementsByClassName("canvas_bg")[0].style.backgroundImage =
-      'url("../images/my2.jpg")';
   }
 
   initImage() {
