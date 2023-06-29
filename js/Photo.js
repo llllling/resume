@@ -1,24 +1,11 @@
 export class Photo {
-  size = 400;
-  constructor() {
+  constructor(canvas) {
+    this.canvas = canvas;
+    this.ctx = canvas.getContext("2d");
+
     document.getElementsByClassName("canvas_bg")[0].style.backgroundImage =
-      'url("../images/my2.jpg")';
-
-    this.initCanvas();
+      'url("../images/my1.jpg")';
     this.initImage();
-  }
-
-  initPosition(e) {
-    this.prePosition = { x: e.offsetX, y: e.offsetY };
-  }
-
-  initCanvas() {
-    this.canvas = document.getElementsByTagName("canvas")[0];
-    this.ctx = this.canvas.getContext("2d");
-    this.canvas.width = this.size;
-    this.canvas.height = this.size;
-    this.canvas.style.width = this.size + "px";
-    this.canvas.style.height = this.size + "px";
   }
 
   initImage() {
@@ -27,6 +14,10 @@ export class Photo {
     this.img.onload = () => {
       this.drawImage();
     };
+  }
+
+  initPosition(e) {
+    this.prePosition = { x: e.offsetX, y: e.offsetY };
   }
 
   drawImage() {
