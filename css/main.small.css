@@ -1,4 +1,8 @@
 /* Header */
+header div {
+  padding: 2rem 0 0;
+}
+
 header {
   text-align: center;
 }
