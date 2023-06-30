@@ -3,6 +3,9 @@ import { Photo } from "./Photo.js";
 export class Browser {
   photoSize = 400;
   constructor() {
+    document.getElementsByClassName("bgimg")[0].style.display = "block";
+    document.getElementsByClassName("reset")[0].style.visibility = "visible";
+
     this.canvas = this.createCanvas();
     this.canvas.addEventListener("mousedown", this.onMousedown);
 

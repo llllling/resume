@@ -30,12 +30,6 @@ header h1 {
 main {
   padding: 0 5rem;
 }
-.bgimg {
-  position: absolute;
-  text-indent: -9999px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
 
 /*Main/Profile*/
 .profile {
@@ -58,11 +52,15 @@ main {
   align-items: flex-end;
 }
 .profile .myinfo .photo .bgimg {
+  display: none;
   position: relative;
   background-image: url("../images/photo_guide.png");
   background-size: 20rem;
+  background-repeat: no-repeat;
+  background-position: center;
   width: 20rem;
   height: 8.5rem;
+  text-indent: -9999px;
 }
 .profile .myinfo .photo .nudake {
   position: relative;
@@ -76,6 +74,8 @@ main {
   height: var(--image-size);
 }
 .profile .myinfo .photo .reset {
+  visibility: hidden;
+
   position: absolute;
   right: -1rem;
   bottom: -1.5rem;
