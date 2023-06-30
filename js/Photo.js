@@ -4,7 +4,7 @@ export class Photo {
     this.ctx = canvas.getContext("2d");
 
     document.getElementsByClassName("canvas_bg")[0].style.backgroundImage =
-      'url("../images/my1.jpg")';
+      'url("../images/my2.jpg")';
     this.initImage();
   }
 
@@ -12,7 +12,7 @@ export class Photo {
     this.img = new Image();
     this.img.src = "../images/my1.jpg";
     this.img.onload = () => {
-      this.drawImage();
+      this.ctx.drawImage(this.img, 0, 0, this.canvas.width, this.canvas.height);
     };
   }
 
