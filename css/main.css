@@ -137,6 +137,7 @@ main {
   top: -1.3rem;
 }
 .profile .introduce strong {
+  display: contents;
   font-weight: 600;
 }
 .profile .introduce ul {
