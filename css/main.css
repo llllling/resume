@@ -3,8 +3,10 @@ body {
   --color-sub-bg: #f0f0f0;
   --color-text: #1e1e21;
   --border: solid #63635d;
-  --skill-color: #49b383;
-  --skill-etc-color: #949385;
+  --skill-color1: #49b383;
+  --skill-color2: #b37e49;
+  --skill-color3: #4979b3;
+  --skill-color4: #949385;
   font-family: "Roboto", "Noto Sans KR", sans-serif;
   background-color: var(--color-bg);
   color: var(--color-text);
@@ -140,6 +142,28 @@ main {
   display: contents;
   font-weight: 600;
 }
+.profile .introduce .highlight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.profile .introduce div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.profile .introduce div.callout {
+  margin: 1rem 0;
+  padding: 1rem 2rem;
+  background-color: var(--color-sub-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  font-weight: bold;
+  border-radius: 1rem;
+}
+
 .profile .introduce ul {
   list-style-type: square;
   padding: 2rem;
@@ -187,13 +211,21 @@ main {
   border-radius: 0.3rem;
   text-align: center;
 }
-.experience .skill_guide ul > li:first-child {
-  background-color: var(--skill-color);
-  border-color: var(--skill-color);
+.experience .skill_guide ul > li:nth-child(1) {
+  background-color: var(--skill-color1);
+  border-color: var(--skill-color1);
 }
-.experience .skill_guide ul > li:last-child {
-  background-color: var(--skill-etc-color);
-  border-color: var(--skill-etc-color);
+.experience .skill_guide ul > li:nth-child(2) {
+  background-color: var(--skill-color2);
+  border-color: var(--skill-color2);
+}
+.experience .skill_guide ul > li:nth-child(3) {
+  background-color: var(--skill-color3);
+  border-color: var(--skill-color3);
+}
+.experience .skill_guide ul > li:nth-child(4) {
+  background-color: var(--skill-color4);
+  border-color: var(--skill-color4);
 }
 
 /* Main/project */
@@ -255,13 +287,23 @@ main {
   padding: 0.2rem 0.5rem;
   border: var(--border);
   border-radius: 0.3rem;
-  border-color: var(--skill-color);
   color: #fff;
-  background-color: var(--skill-color);
+}
+.experience .project .skill li.front {
+  border-color: var(--skill-color1);
+  background-color: var(--skill-color1);
+}
+.experience .project .skill li.back {
+  border-color: var(--skill-color2);
+  background-color: var(--skill-color2);
+}
+.experience .project .skill li.db {
+  border-color: var(--skill-color3);
+  background-color: var(--skill-color3);
 }
 .experience .project .skill li.etc {
-  border-color: var(--skill-etc-color);
-  background-color: var(--skill-etc-color);
+  border-color: var(--skill-color4);
+  background-color: var(--skill-color4);
 }
 
 /* Main/Education */
@@ -276,7 +318,7 @@ main {
   line-height: 1.5rem;
 }
 .education div.description {
-  margin-top: 1.5rem;
+  font-size: 0.9rem;
 }
 
 /* Main/Certificate */
