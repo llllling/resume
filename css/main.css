@@ -1,9 +1,10 @@
 body {
-  --color-bg: #fff;
-  --color-sub-bg: #f0f0f0;
-  --color-text: #1e1e21;
+  --color-bg: #1e1e21;
+  --color-sub-bg: #38383d;
+  --color-text: #D2D2D3;
+  --color-text2: #fff;
   --border: solid #63635d;
-  --skill-color1: #49b383;
+  --skill-color1: #3b926b;
   --skill-color2: #b37e49;
   --skill-color3: #4979b3;
   --skill-color4: #949385;
@@ -14,19 +15,9 @@ body {
 h1 {
   font-size: 3rem;
   font-weight: 700;
+  color : var(--color-text2);
 }
 
-/*Header*/
-header {
-  padding: 0 1rem;
-}
-header div {
-  padding: 2rem;
-  margin-bottom: 1rem;
-}
-header h1 {
-  font-size: 5rem;
-}
 
 /*Main*/
 main {
@@ -36,22 +27,55 @@ main {
 /*Main/Profile*/
 .profile {
   display: flex;
+  flex-direction: column;
   align-items: center;
   margin-bottom: 4rem;
-  gap: 7rem;
+  gap: 3rem;
 }
 
 /* Main/Profile/myinfo */
 .profile .myinfo {
   display: flex;
-  flex-direction: column;
+  align-items: start;
+  padding-top : 2rem;
+  gap: 3rem;
+}
+.profile .myinfo .header {
+  margin-top: 9rem;
+}
+.profile .myinfo .header h1 {
+  font-size: 5rem;
+  color : var(--color-text2);
+  line-height: 6rem;
+}
+
+.profile .myinfo .contact ul {
+  margin-top: 8rem;
+  box-sizing: border-box;
   align-items: center;
 }
+.profile .myinfo .contact li {
+  display: flex;
+  font-weight: bold;
+  font-size: 1.5rem;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 1.5rem 0;
+}
+.profile .myinfo .contact img {
+  width: 1.3rem;
+}
+.profile .myinfo .contact a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
 .profile .myinfo .photo {
   margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  gap: 0.5rem;
 }
 .profile .myinfo .photo .bgimg {
   display: none;
@@ -66,10 +90,9 @@ main {
 }
 .profile .myinfo .photo .nudake {
   position: relative;
-  transform: rotate(-10deg);
 }
 .profile .myinfo .photo .nudake .canvas_bg {
-  --image-size: 400px;
+  --image-size: 500px;
   background-repeat: no-repeat;
   background-size: var(--image-size);
   width: var(--image-size);
@@ -101,24 +124,7 @@ main {
   border-bottom-color: var(--color-text);
   border-left-color: var(--color-text);
 }
-.profile .myinfo .contact ul {
-  box-sizing: border-box;
-}
-.profile .myinfo .contact li {
-  display: flex;
-  font-weight: 700;
-  font-size: 1.2rem;
-  align-items: center;
-  gap: 1rem;
-  margin: 0.7rem 0;
-}
-.profile .myinfo .contact img {
-  width: 1.3rem;
-}
-.profile .myinfo .contact a {
-  text-decoration: none;
-  color: var(--color-text);
-}
+
 
 /* Main/Profile/introduce */
 .profile .introduce {
@@ -142,22 +148,26 @@ main {
 .profile .introduce strong {
   display: contents;
   font-weight: 600;
+  color : var(--color-text2);
 }
 .profile .introduce div {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.profile .introduce .highlight span {
-  width: fit-content;
-  background-color: antiquewhite;
+.profile .introduce .colorpencil{
+  display : contents;
+  font-weight: bold;
+  color : #efc576;
 }
 .profile .introduce .callout-container {
-  margin: 3rem 0;
+  margin: 2.5rem 0;
 }
 .profile .introduce .callout-container span {
+  display: contents;
   font-style: italic;
   margin-bottom: 0.5rem;
+  color : var(--color-text2);
 }
 .profile .introduce .callout-container .callout {
   margin: 1rem 0;
@@ -178,27 +188,229 @@ main {
   margin: 0;
   margin-top: 0.5rem;
 }
-.profile .introduce ul {
+.profile .introduce .list {
+  padding : 0 4rem;
+  margin-bottom: 2rem;
+}
+.profile .introduce .list ul {
   list-style-type: square;
   padding: 2rem;
+  margin: 0.8rem 0;
   background-color: var(--color-sub-bg);
   border-top: var(--border);
   border-top-width: 0.3rem;
+  color : var(--color-text2);
+  text-align: start;
+}
+.profile .introduce .list strong {
+  display: contents;
+  font-weight: bold;
+  color : var(--color-text2);
 }
 .profile .introduce ul > li {
   margin-bottom: 1rem;
 }
+/*Main/Project*/
+.project {
+  margin-bottom: 3rem;
+}
+.project section {
+  margin-bottom: 5rem;
+}
+.project h4{
+  font-weight: bold;
+  font-size : 1.5rem;
+  margin-bottom : 0.7rem;
+}
+.project h5{
+  font-weight: bold;
+  font-size : 1.2rem;
+  margin-bottom : 1rem;
+}
+.project .guide {
+  margin : 1rem 0;
+}
+.project .title {
+  margin : 1rem 0;
+  border-bottom: 2rem black;
+}
+.project .title h3 {
+  display : flex;
+  gap: 0.2rem;
+  margin-bottom: 1rem;
+  font-size : 2rem;
+  font-weight: bold;
+}
 
+.project .title .tag {
+  width : 3rem;
+  padding: 0.5rem 0.7rem;
+  border: var(--skill-color1);
+  border-radius: 0.3rem;
+  text-align: center;
+  background-color: var(--skill-color1);
+  color : var(--color-text);
+
+  font-size : 1rem;
+}
+.project .title .line {
+  margin : 1.75rem 0 0 -8rem;
+  width : 15rem;
+  height: 0.3rem;
+  background-color: var(--color-text);
+}
+.project .content{
+  display: flex;
+}
+.project .content .video {
+  text-align: center;
+  margin-right: 2rem;
+  flex : 1;
+}
+.project .content .video video{
+  width: 100%;
+}
+.project .content .explanation {
+  flex : 1;
+}
+.project .content .explanation .item{
+  margin-bottom: 2rem;
+  font-size : 1.15rem;
+  line-height: 1.3rem;
+}
+.project .content .explanation .panel_title{
+  margin-bottom : 0.1rem;
+}
+.project .content .explanation .panel{
+  padding : 1rem;
+  background-color: var(--color-sub-bg);
+  border-radius: 1rem;
+}
+.project .content .explanation ul {
+  margin-bottom : 0.7rem;
+  padding-left : 2rem;
+}
+.project .content .explanation ul li{
+  list-style: disc;
+  margin-bottom: 0.7rem;
+}
+/*Main/Project/ThreeD*/
+.project .threeD .title .tag {
+  background-color: var(--skill-color3);
+}
+.project .threeD .scroll {
+  margin-bottom: 2rem;
+
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+
+  display: flex;
+  gap: 1rem;
+}
+.project .threeD .scroll .tag {
+  width : fit-content;
+  padding : 0.5rem 0.8rem;
+  
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+
+  background-color: var(--skill-color4);
+  color: var(--color-bg);
+  font-size: bold;
+}
+.project .threeD .scroll video{
+  width: 19.5rem;
+}
+.project .threeD .content{
+  gap : 1rem;
+  align-items: start;
+}
+.project .threeD .content > div{
+  flex: 1;
+}
+/*Main/Project/Source*/
+.project .source {
+  margin: 2rem 0;
+}
+.project .source .gitguide {
+  margin-bottom: 2rem;
+  padding : 1.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-text);
+  color : var(--color-sub-bg);
+} 
+.project .source .gitguide a{
+  padding : 0.5rem 0.3rem;
+  border-radius: 0.3rem;
+
+  font-weight: bold;
+  text-decoration: none;
+  background-color:	#FF7F50;
+  color: var(--color-text2);
+}
+.project .source ul {
+  margin-left: 1rem;
+  list-style: disc;
+}
+.project .source ul li{
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.project .source ul li div{
+  padding : 1rem;
+  margin-top : 0.5rem;
+
+  font-size: medium;
+  font-weight: normal;
+  color : var(--color-text);
+  background-color: var(--color-sub-bg);
+  border-radius: 0.3rem;
+ }
+.project .source .sub ul{
+ margin-top: 0.8rem;
+ list-style: square;
+}
+.project .source .sub ul li{
+  font-size: medium;
+  color : #fa9c7a;
+ }
+ .project .source .sub .list ul {
+  list-style: decimal;
+ }
+ .project .source .sub .list li {
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+  font-weight: normal;
+ }
+ .project .source .sub .list ol {
+  list-style: circle;
+ }
+ .project .source .sub .list ol li {
+  color : var(--skill-color2);
+  margin: 0.5rem 0 0.5rem 2rem;
+  font-weight: normal;
+ }
+ .project .source .sub .list ol li span {
+  color : var(--skill-color4);
+ }
 /*Main/Experience*/
 .experience {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
+}
+.experience summary{
+  margin-bottom: 1rem;
+  color: #FF7F50; 
+  font-size: 1.3rem; 
+  font-weight: bold;
 }
 .experience h1 {
   margin: 2rem 0 1rem 0;
 }
 .experience .title {
   padding: 1rem;
-
   background-color: var(--color-text);
   color: var(--color-bg);
 }
@@ -242,7 +454,7 @@ main {
   border-color: var(--skill-color4);
 }
 
-/* Main/project */
+/* Main/experience/project */
 .experience .project {
   margin-bottom: 3rem;
   position: relative;
@@ -251,8 +463,8 @@ main {
 .experience .project .title {
   padding: 0;
   margin-bottom: 0rem;
+  color : var(--color-text);
   background-color: var(--color-bg);
-  color: var(--color-text);
   font-size: 2rem;
   font-weight: 700;
 }

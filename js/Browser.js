@@ -1,7 +1,7 @@
 import { Photo } from "./Photo.js";
 
 export class Browser {
-  photoSize = 400;
+  photoSize = 500;
   constructor() {
     document.getElementsByClassName("bgimg")[0].style.display = "block";
     document.getElementsByClassName("reset")[0].style.visibility = "visible";
@@ -32,7 +32,7 @@ export class Browser {
     this.canvas.addEventListener("mouseup", this.onMouseUp);
     window.addEventListener("mouseup", this.onMouseUp);
 
-    //ì´ë²¤íŠ¸ í•¨ìˆ˜ëŠ” ë‚´ë¶€ì ìœ¼ë¡œ thisê°€ í•´ë‹¹ ì—˜ë¦¬ë¨¼íŠ¸ë¡œ ë°”ë€œ
+    //?´ë²¤íŠ¸ ?•¨?ˆ˜?Š” ?‚´ë¶?? ?œ¼ë¡? thisê°? ?•´?‹¹ ?—˜ë¦¬ë¨¼?Š¸ë¡? ë°”ë??
     this.resetBtn.addEventListener(
       "click",
       this.photo.drawImage.bind(this.photo)

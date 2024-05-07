@@ -12,16 +12,39 @@ header {
 main {
   padding: 0 1rem;
 }
+
 /*Main/Profile*/
-.profile {
-  flex-direction: column;
-  align-items: center;
-  gap: none;
-}
 .profile .myinfo {
-  flex-direction: column;
-  margin-right: 0;
+  flex-direction: column-reverse;
+  gap: 0;
+}
+.profile .myinfo .header {
+  margin-top: 0;
+}
+.profile .myinfo .header h1 {
+  font-size: 4.5rem;
+  line-height: 5.5rem;
+}
+.profile .myinfo .contact ul {
+  margin-top: 0;
+}
+.profile .myinfo .contact ul li {
+  font-size: 1.5rem;
 }
 .profile .introduce {
   margin-top: 3rem;
+}
+/*Main/Project*/
+.project .content{
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.project .threeD .content {
+  flex-direction: column;
+  align-items: center;
+}
+.project .threeD .content > div{
+  margin: 0 auto;
+  width: 90%;
 }

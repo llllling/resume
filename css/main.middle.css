@@ -8,12 +8,22 @@ header h1 {
 main {
   padding: 0 1.5rem;
 }
-.profile {
-  gap: 2rem;
+/*Main/Profile*/
+.profile .myinfo .header h1 {
+  font-size: 3rem;
+  line-height: 4rem;
+}
+.profile .myinfo .contact ul {
+  margin-top: 11rem;
 }
 .profile .myinfo .photo .bgimg {
   margin-bottom: 1rem;
 }
 .profile .myinfo .photo .nudake {
   transform: none;
+}
+
+/* Main/Project*/
+.project .title div a{
+  line-height: 3rem;
 }
